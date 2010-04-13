@@ -18,7 +18,6 @@
 		public function WVector() 
 		{
 			tekening = false;
-
 		}
 		
 		public function setCartesiaans(dx:Number, dy:Number):void
@@ -40,13 +39,13 @@
 			this.hoek = hoek;
 			this.dx = r*Math.cos(hoek);
 			this.dy = r * Math.sin(hoek);
+			
 			if(tekening)
 			{
 				teken(this.schaal, this.kleur)
 			}
 		}
-		
-		
+			
 		public function teken(schaal:Number, kleur:uint):void
 		{
 			tekening = true;
@@ -78,8 +77,6 @@
 				graphics.lineTo(lengte, 0);
 				graphics.endFill();				
 			}
-			
 		}
 	}
-
 }
