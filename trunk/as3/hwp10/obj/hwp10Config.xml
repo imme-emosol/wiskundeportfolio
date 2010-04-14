@@ -4,12 +4,12 @@
 <flex-config>
   <compiler>
     <source-path append="true">
-      <path-element>D:\projecten 2009 2010 nw\wiskunde portfolio\hwp10\hwp10\src</path-element>
+      <path-element>C:\Documents and Settings\j.sjollema\Desktop\trunk\as3\hwp10\src</path-element>
       <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>D:\projecten 2009 2010 nw\wiskunde portfolio\hwp10\hwp10\src\Temp.as</path-element>
+    <path-element>C:\Documents and Settings\j.sjollema\Desktop\trunk\as3\hwp10\src\Temp.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
