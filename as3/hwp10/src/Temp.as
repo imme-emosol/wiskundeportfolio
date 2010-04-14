@@ -3,8 +3,8 @@
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import org.portfolio.assets.Pijl;
-	import org.wiskunde.WVector;
-	import org.wiskunde.Hoeken;
+	import org.wiskunde.objecten.WVector;
+	import org.wiskunde.functies.Hoeken;
 	/**
 	 * ...
 	 * @author Jelle Sjollema
