@@ -18,7 +18,7 @@
 			a.setCartesiaans(5, 5);
 			trace(a.r);
 			trace(Hoeken.graden(a.hoek));
-			a.teken(10, 0x0000ff);
+			a.teken(10, 0x000000);
 			addChild(a);
 			a.x = 300;
 			a.y = 300;
