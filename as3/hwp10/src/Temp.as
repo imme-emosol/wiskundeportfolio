@@ -1,58 +1,31 @@
 ﻿package  
 {
+	import flash.display.SpreadMethod;
 	import flash.display.Sprite;
-	import flash.events.Event;
-	import org.portfolio.assets.Pijl;
-	import org.wiskunde.objecten.WVector;
-	import org.wiskunde.functies.Hoeken;
+	import org.wiskunde.objecten.Lijn;
+	import org.wiskunde.objecten.Punt;
 	/**
 	 * ...
 	 * @author Jelle Sjollema
 	 */
 	public class Temp extends Sprite
 	{
-		public var a:WVector = new WVector();
 		
 		public function Temp() 
 		{
-			a.setCartesiaans(5, 5);
-			trace(a.r);
-			trace(Hoeken.graden(a.hoek));
-			a.teken(10, 0x000000);
-			addChild(a);
-			a.x = 300;
-			a.y = 300;
+			var l:Lijn = new Lijn(-4, 7, -28);
 			
-			addEventListener(Event.ENTER_FRAME, beweeg);
-		}
-		
-		public function beweeg(e:Event):void
-		{
-			a.x = a.x + a.dx;
-			a.y = a.y + a.dy;
+			var Q:Punt = l.berekenX(0);
+			var R:Punt = l.berekenX(8);
+			var S:Punt = l.berekenY(0);
+			var T:Punt = l.berekenY(8);
 			
-			if (a.y > 600)
-			{
-				a.setCartesiaans(a.dx, -a.dy);	
-			}
-			
-			if (a.x > 800)
-			{
-				a.setCartesiaans( -a.dx, a.dy);
-			}
-			
-			if (a.y < 0)
-			{
-				a.setCartesiaans(a.dx, -a.dy);
-				
-			}
-			if (a.x < 0)
-			{
-				a.setCartesiaans( -a.dx, a.dy);
-			}
+			trace(Q.x, Q.y);
+			trace(R.x, R.y);
+			trace(S.x, S.y);
+			trace(T.x, T.y);
 			
 		}
-		
 		
 	}
 
