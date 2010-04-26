@@ -1,4 +1,4 @@
-﻿package org.wiskunde.objecten 
+﻿package org.wiskunde.meetkunde
 {
 	import flash.display.Sprite;
 	/**
