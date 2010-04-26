@@ -1,4 +1,4 @@
-﻿package org.wiskunde.objecten 
+﻿package org.wiskunde.vectoren
 {
 	import flash.display.Sprite;
 	import org.wiskunde.functies.Hoeken;
