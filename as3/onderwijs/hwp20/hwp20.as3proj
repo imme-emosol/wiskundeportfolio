@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <!-- Output SWF options -->
+  <output>
+    <movie disabled="False" />
+    <movie input="" />
+    <movie path="bin\transformatieMatrix.swf" />
+    <movie fps="30" />
+    <movie width="960" />
+    <movie height="600" />
+    <movie version="10" />
+    <movie background="#FFFFFF" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="src" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option accessible="False" />
+    <option allowSourcePathOverlap="False" />
+    <option benchmark="False" />
+    <option es="False" />
+    <option loadConfig="" />
+    <option optimize="True" />
+    <option showActionScriptWarnings="True" />
+    <option showBindingWarnings="True" />
+    <option showDeprecationWarnings="True" />
+    <option showUnusedTypeSelectorWarnings="True" />
+    <option strict="True" />
+    <option useNetwork="True" />
+    <option useResourceBundleMetadata="True" />
+    <option warnings="True" />
+    <option verboseStackTraces="False" />
+    <option linkReport="" />
+    <option loadExterns="" />
+    <option additional="" />
+    <option customSDK="" />
+  </build>
+  <!-- SWC Include Libraries -->
+  <includeLibraries>
+    <!-- example: <element path="..." /> -->
+  </includeLibraries>
+  <!-- SWC Libraries -->
+  <libraryPaths>
+    <element path="src\org\portfolio\calculators\verhoudingen\schalen.swc" />
+    <element path="src\org\portfolio\calculators\verhoudingen\verhoudiing_optellen.swc" />
+    <element path="src\org\portfolio\calculators\verhoudingen\verhouding_vermenigvuldigen.swc" />
+    <element path="src\org\portfolio\calculators\verhoudingen\verhouding_uitvullen.swc" />
+    <element path="src\org\portfolio\calculators\verhoudingen\breuk_vereenvoudigen.swc" />
+    <element path="src\org\portfolio\calculators\getallen\getal_delers.swc" />
+    <element path="src\calculators\forms\swc\breuk_vereenvoudigen.swc" />
+    <element path="src\calculators\forms\swc\getal_delers.swc" />
+    <element path="src\calculators\forms\swc\schalen.swc" />
+    <element path="src\calculators\forms\swc\verhoudiing_optellen.swc" />
+    <element path="src\calculators\forms\swc\verhouding_vermenigvuldigen.swc" />
+    <element path="src\context\verhoudingen\verhouding_uitvullen.swc" />
+    <element path="src\calculators\forms\swc\getallen_optellen.swc" />
+    <element path="src\calculators\forms\swc\getallen_vermenigvuldigen.swc" />
+    <element path="src\calculators\forms\swc\getal_afronden.swc" />
+    <element path="src\calculators\forms\swc\vector_normeren.swc" />
+    <element path="src\calculators\forms\swc\vector_orthogonaliseren.swc" />
+    <element path="src\calculators\forms\swc\vector_normaliseren.swc" />
+    <element path="src\calculators\forms\swc\getal_naar_SBreuk.swc" />
+    <element path="src\calculators\forms\swc\vector_coordinaten.swc" />
+    <element path="src\calculators\forms\swc\lijn_functievoorschrift.swc" />
+    <element path="src\calculators\forms\swc\getal_priemdelers.swc" />
+  </libraryPaths>
+  <!-- External Libraries -->
+  <externalLibraryPaths>
+    <!-- example: <element path="..." /> -->
+  </externalLibraryPaths>
+  <!-- Runtime Shared Libraries -->
+  <rslPaths>
+    <!-- example: <element path="..." /> -->
+  </rslPaths>
+  <!-- Intrinsic Libraries -->
+  <intrinsics>
+    <!-- example: <element path="..." /> -->
+  </intrinsics>
+  <!-- Assets to embed into the output SWF -->
+  <library>
+    <!-- example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..." /> -->
+  </library>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\Temp.as" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <!-- example: <hidden path="..." /> -->
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand />
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False" />
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Default" />
+  </options>
+</project>
