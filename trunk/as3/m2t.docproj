@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <pageTitle>MT2A</pageTitle>
+  <classPaths>D:\klas20102011\mt2a\src\wiskunde</classPaths>
+  <sourcesList />
+  <outputDirectory>D:\klas20102011\mt2a\docs</outputDirectory>
+  <activeCompiler>1</activeCompiler>
+  <extraOptions />
+</docProject>
