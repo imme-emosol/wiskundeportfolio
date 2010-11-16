@@ -12,12 +12,12 @@
 		
 		public function TestVerhouding() 
 		{
-			var v:Verhouding = new Verhouding(2, 3);
+			var v:Verhouding = new Verhouding(48, 48);
 			trace(v.deeltal);
 			trace(v.deler);
 			trace(v.quotient);
 			
-			var w:Verhouding = new Verhouding(1, 2);
+			var w:Verhouding = new Verhouding(80, 60);
 			trace(w.deeltal);
 			trace(w.deler);
 			trace(w.quotient);
