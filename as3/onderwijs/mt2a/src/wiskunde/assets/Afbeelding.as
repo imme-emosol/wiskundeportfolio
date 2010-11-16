@@ -12,6 +12,10 @@
 	{
 		public var lader:Loader;
 		public var url:String;
+		public var hoogte:Number;
+		public var breedte:Number;
+		
+		public static const PLAATJE_GELADEN:String = "plaatje_geladen";
 		private var req:URLRequest;
 		
 		
@@ -19,23 +23,18 @@
 		{
 			this.url = url;
 			lader = new Loader();
-			
-			//url = "http://www.signtotaal.nl/Webpagina%27s%20Standhouders/Opleidingen/Mediacollege_Amsterdam/Mediacollege_Amsterdam_logo.jpg";
 			req = new URLRequest(url);
-			
 			lader.load(req);
 			lader.contentLoaderInfo.addEventListener(Event.COMPLETE, compleet);
-			
-			
-			
-			
+
 		}
 		
 		private function compleet(e:Event):void
 		{
+			hoogte = lader.height;
+			breedte = lader.width;
 			addChild(lader);
-			trace('de breedte is ' + lader.width);
-			trace('de hoogte is ' + lader.height);
+			this.dispatchEvent(new Event(Afbeelding.PLAATJE_GELADEN, true));
 		}
 		
 	}

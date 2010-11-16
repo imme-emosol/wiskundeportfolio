@@ -16,6 +16,7 @@
 			
 			
 			var q:Afbeelding = new Afbeelding("http://userserve-ak.last.fm/serve/34s/11410203.gif");
+			trace('breedte' + p.breedte);
 			addChild(q);
 		}
 		
