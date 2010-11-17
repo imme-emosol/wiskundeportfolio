@@ -2,6 +2,7 @@
 {
 	import flash.display.Loader;
 	import flash.display.Sprite;
+	import flash.events.Event;
 	import flash.net.URLRequest;
 	/**
 	 * ...
@@ -13,19 +14,28 @@
 		public var hoogte:Number;
 		public var breedte:Number;
 		
-		public const AFBEELDING_GELADEN:String = "afbeelding_geladen";
+		public static const AFBEELDING_GELADEN:String = "afbeelding_geladen";
 		private var lader:Loader;
 		
 		
-		public function Afbeelding() 
+		public function Afbeelding(url:String) 
 		{
+			
 			lader = new Loader();
-			url = "http://wiki.wiskundeportfolio.nl/logo/wisportfolio_logo.png";
+			this.url = url;
 			
 			lader.load(new URLRequest(url));
-			addChild(lader);
-
 			
+			lader.contentLoaderInfo.addEventListener(Event.COMPLETE, update)
+			
+		}
+		
+		private function update(e:Event):void
+		{
+			addChild(lader);
+			hoogte = lader.height;
+			breedte = lader.width;
+			this.dispatchEvent(new Event(AFBEELDING_GELADEN, true));
 		}
 		
 	}
