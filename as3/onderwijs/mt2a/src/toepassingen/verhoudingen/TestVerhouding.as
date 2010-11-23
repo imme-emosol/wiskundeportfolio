@@ -37,6 +37,8 @@
 			
 			ab.box.addEventListener(Event.CHANGE, updateB);
 			ao.box.addEventListener(Event.CHANGE, updateB);
+			bb.box.addEventListener(Event.CHANGE, updateB);
+			bo.box.addEventListener(Event.CHANGE, updateBO);
 		}
 		
 		private function updateB(e:Event):void
@@ -45,7 +47,15 @@
 			b = VerhoudingsOperatie.schaalDeler(a, Number(bb.box.text));
 			bo.box.text = String(GetalOperaties.afronding(b.deler,3))
 		}
-		
+
+
+		private function updateBO(e:Event):void
+		{
+			a = new Verhouding(Number(ab.box.text), Number(ao.box.text));
+			b = VerhoudingsOperatie.schaalDeeltal(a, Number(bo.box.text));
+			bb.box.text = String(GetalOperaties.afronding(b.deeltal,3))
+		}
+
 	}
 
 }
