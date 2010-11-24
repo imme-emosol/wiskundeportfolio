@@ -17,6 +17,8 @@
 		public var box:TextField;
 		private var format:TextFormat;
 		public var waarde:Number;
+		
+		public static const TEXT_VERANDERD:String = "text_verwerkt";
  
 		public function InputBox(x:Number, y:Number, labelText:String, waarde:Number = 0) 
 		{
@@ -64,6 +66,7 @@
 		public function update(e:Event):void
 		{
 			this.waarde = Number(box.text);
+			this.dispatchEvent(new Event(InputBox.TEXT_VERANDERD, true));
 		}
  
 		public function set setWaarde(a:Number):void
