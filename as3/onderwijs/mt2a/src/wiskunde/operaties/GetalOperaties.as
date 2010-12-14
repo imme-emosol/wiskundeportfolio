@@ -82,7 +82,15 @@
 			return antwoord;
 		}
 
-		
+		public static function vindDecimaal(getal:String):String
+		{
+			var antwoord:String = '';
+			var re:RegExp = /(.+?)(\1+)$/;
+			var patroon:Array = re.exec(getal);
+			antwoord = patroon[1];
+			antwoord= getal.replace(patroon[0], '' );
+			return antwoord;
+		}		
 		
 		
 	}
