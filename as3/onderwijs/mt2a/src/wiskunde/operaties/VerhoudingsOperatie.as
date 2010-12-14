@@ -51,6 +51,9 @@
 			
 			repetend = GetalOperaties.vindRepetend(getal);
 			decimaal = GetalOperaties.vindDecimaal(getal);
+			var temp:Array = decimaal.split(".");
+			decimaal = temp[1];
+			entier = temp[0];
 			
 			antwoord = new QGetal(entier, decimaal, repetend);
 			return antwoord;
