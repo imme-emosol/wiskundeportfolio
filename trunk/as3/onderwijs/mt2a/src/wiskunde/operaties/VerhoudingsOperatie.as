@@ -1,5 +1,7 @@
 ﻿package wiskunde.operaties 
 {
+	import wiskunde.objecten.Breuk;
+	import wiskunde.objecten.QGetal;
 	import wiskunde.objecten.Verhouding;
 	/**
 	 * ...
@@ -35,6 +37,22 @@
 		public static function inverse(a:Verhouding):Verhouding
 		{
 			var antwoord:Verhouding = new Verhouding(a.deler, a.deeltal);
+			return antwoord;
+		}
+		public static function breukNaarQGetal(a:Breuk):QGetal
+		{
+			var antwoord:QGetal;
+			
+			var entier:String;
+			var decimaal:String;
+			var repetend:String;
+			
+			var getal:String = GetalOperaties.staartDeling(a.teller, a.noemer,2000);
+			
+			repetend = GetalOperaties.vindRepetend(getal);
+			decimaal = GetalOperaties.vindDecimaal(getal);
+			
+			antwoord = new QGetal(entier, decimaal, repetend);
 			return antwoord;
 		}
 		
