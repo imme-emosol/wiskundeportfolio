@@ -16,7 +16,8 @@
 		public function OutputBox(x:Number, y:Number,inTekst:String) 
 		{
 			formaat = new TextFormat();
-			formaat.size = 30;
+			formaat.font = "Courier new";
+			formaat.size = 20;
 			
 			this.x = x;
 			this.y = y;

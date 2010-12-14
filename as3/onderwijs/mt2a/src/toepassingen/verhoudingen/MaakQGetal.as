@@ -31,16 +31,16 @@
 			tbNoemer = new InputBox(0, 60, 'noemer', 11);
 			
 			tbEntier = new OutputBox(200, 0, 'leeg');
-			tbDecimaal = new OutputBox(200, 200, 'leeg');
-			tbRepetend = new OutputBox(200, 400, 'leeg');
+			tbDecimaal = new OutputBox(200, 60, 'leeg');
+			tbRepetend = new OutputBox(200, 360, 'leeg');
 			
 			tbEntier.box.width = 600;
 			tbDecimaal.box.width = 600;
 			tbRepetend.box.width = 600;
 
-			tbEntier.box.height= 200;
-			tbDecimaal.box.height= 200;
-			tbRepetend.box.height = 200;
+			tbEntier.box.height= 60;
+			tbDecimaal.box.height= 300;
+			tbRepetend.box.height = 300;
 			
 			tbEntier.box.wordWrap = true;
 			tbDecimaal.box.wordWrap = true;
