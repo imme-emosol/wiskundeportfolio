@@ -1,5 +1,7 @@
 ﻿package wiskunde.operaties 
 {
+	import wiskunde.objecten.Breuk;
+	import wiskunde.objecten.QGetal;
 	import wiskunde.objecten.Verhouding;
 	/**
 	 * Operaties met Getallen
@@ -72,7 +74,6 @@
 			var patroon:Object = re.exec(getal);
 			antwoord = patroon[1];
 			var decimaal:String = getal.replace(patroon[0], '' );
-			antwoord = "decimaal: " + decimaal + "\n" + "repetend: " + patroon[1];
 			return antwoord;
 		}
 		
@@ -101,6 +102,26 @@
 			antwoord = new Verhouding(temp, exp);
 			return antwoord;
 			
+		}
+		
+		public static function breukNaarQGetal(breuk:Breuk):QGetal
+		{
+			var entier:String;
+			var decimaal:String;
+			var repetend:String
+			
+			var getal:String = staartdeling(breuk.teller, breuk.noemer, 1000);
+			repetend = vindRepetend(getal);
+
+			var re:RegExp = /(.+?)(\1+)$/;
+			var g:String = getal.replace(re, '');
+
+			var tmp:Array = g.split(".");
+			entier = tmp[0];
+			decimaal = tmp[1];
+			
+			var antwoord:QGetal = new QGetal(entier, decimaal, repetend);
+			return antwoord;
 		}
 
 	}
