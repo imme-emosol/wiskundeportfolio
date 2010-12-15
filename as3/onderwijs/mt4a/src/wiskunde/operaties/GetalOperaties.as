@@ -69,9 +69,10 @@
 		{
 			var antwoord:String = '';
 			var re:RegExp = /(.+?)(\1+)$/;
-			var patroon:Array = re.exec(getal);
-			antwoord = patroon[1]
-			trace("antwoord", antwoord);
+			var patroon:Object = re.exec(getal);
+			antwoord = patroon[1];
+			var decimaal:String = getal.replace(patroon[0], '' );
+			antwoord = "decimaal: " + decimaal + "\n" + "repetend: " + patroon[1];
 			return antwoord;
 		}
 		

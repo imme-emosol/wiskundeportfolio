@@ -38,14 +38,14 @@
 			outputQuotient.width = 800;
 			outputQuotient.height = 300;
 			outputQuotient.border = true;
-			outputQuotient.y = 150;
+			outputQuotient.y = 130;
 			outputQuotient.wordWrap = true;
 			
 			outputRepetend = new TextField();
 			outputRepetend.width = 800;
 			outputRepetend.height = 80;
 			outputRepetend.border = true;
-			outputRepetend.y = 500;
+			outputRepetend.y = 440;
 			outputRepetend.wordWrap = true;
 			
 			addChild(inputDeeltal);
