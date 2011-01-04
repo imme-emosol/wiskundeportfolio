@@ -1,5 +1,6 @@
 ﻿package wiskunde.operaties 
 {
+	import wiskunde.objecten.Breuk;
 	import wiskunde.objecten.Verhouding;
 	/**
 	 * ...
@@ -28,9 +29,9 @@
 			return antwoord;
 		}
 
-		public static function getalAdBreuk(a:Number):Verhouding
+		public static function getalAdBreuk(a:Number):Breuk
 		{
-			var antwoord:Verhouding;
+			var antwoord:Breuk;
 			var temp:Number;
 			
 			
@@ -40,7 +41,7 @@
 				temp = a * Math.pow(10, i);
 				if (temp == Math.floor(temp))
 				{
-					antwoord = new Verhouding(temp, Math.pow(10, i));
+					antwoord = new Breuk(temp, Math.pow(10, i));
 					break;
 				}
 			}
