@@ -47,7 +47,7 @@
 			var decimaal:String;
 			var repetend:String;
 			
-			var getal:String = GetalOperaties.staartDeling(a.teller, a.noemer,2000);
+			var getal:String = GetalOperaties.staartDeling(a.teller, a.noemer, 5000);
 			
 			repetend = GetalOperaties.vindRepetend(getal);
 			decimaal = GetalOperaties.vindDecimaal(getal);
