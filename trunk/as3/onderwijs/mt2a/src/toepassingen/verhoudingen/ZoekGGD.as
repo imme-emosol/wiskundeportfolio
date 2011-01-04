@@ -1,6 +1,8 @@
 ﻿package toepassingen.verhoudingen 
 {
 	import flash.display.Sprite;
+	import wiskunde.objecten.Breuk;
+	import wiskunde.operaties.BreukOperaties;
 	import wiskunde.operaties.GetalOperaties;
 	/**
 	 * ...
@@ -13,10 +15,10 @@
 		
 		public function ZoekGGD() 
 		{
-			a = 1280;
-			b = 600;
-			var ggd:Number = GetalOperaties.ggd(a, b);
-			trace("ggd:", ggd);
+			var c:Breuk = new Breuk(18.56, 1392);
+			trace(GetalOperaties.ggd(c.teller, c.noemer));
+			var d: Breuk = BreukOperaties.vereenvoudig(c);
+			trace(d.teller, d.noemer);
 			
 		}
 		
