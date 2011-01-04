@@ -22,7 +22,8 @@
 		public var tbEntier:OutputBox;
 		public var tbDecimaal:OutputBox;
 		public var tbRepetend:OutputBox;
-		
+		public var tbOutput:OutputBox;
+		public var tbDeling:OutputBox;
 		
 		
 		public function MaakQGetal() 
@@ -30,30 +31,25 @@
 			tbTeller = new InputBox(0, 0, 'teller', 9);
 			tbNoemer = new InputBox(0, 60, 'noemer', 11);
 			
-			tbEntier = new OutputBox(200, 0, 'leeg');
-			tbDecimaal = new OutputBox(200, 60, 'leeg');
-			tbRepetend = new OutputBox(200, 360, 'leeg');
 			
-			tbEntier.box.width = 600;
-			tbDecimaal.box.width = 600;
-			tbRepetend.box.width = 600;
-
-			tbEntier.box.height= 60;
-			tbDecimaal.box.height= 300;
-			tbRepetend.box.height = 300;
-			
-			tbEntier.box.wordWrap = true;
-			tbDecimaal.box.wordWrap = true;
-			tbRepetend.box.wordWrap = true;
-			
+			tbOutput = new OutputBox(200, 60, '');
+			tbOutput.box.width = 758;
+			tbOutput.box.height = 539;
+			tbOutput.box.wordWrap = true;
+			tbOutput.box.border = true;
+				
+			tbDeling= new OutputBox(200, 0, '');
+			tbDeling.box.width = 758;
+			tbDeling.box.height = 60;
+			tbDeling.box.wordWrap = true;
+			tbDeling.box.border = true;
 			
 			//trace(q.entier, q.decimaal, q.repetend);
 			addChild(tbTeller);
 			addChild(tbNoemer);
 			
-			addChild(tbEntier);
-			addChild(tbDecimaal);
-			addChild(tbRepetend);
+			addChild(tbOutput);
+			addChild(tbDeling);
 			
 			tbTeller.box.addEventListener(Event.CHANGE, update);
 			tbNoemer.box.addEventListener(Event.CHANGE, update);
@@ -66,10 +62,11 @@
 			a= new Breuk(Number(tbTeller.box.text), Number(tbNoemer.box.text));
 			q = VerhoudingsOperatie.breukNaarQGetal(a);
 			
-			tbEntier.box.text = "entier:" + "\n" + q.entier;
-			tbDecimaal.box.text = "decimaal: \n" + q.decimaal;
-			tbRepetend.box.text = "repetend: \n" + q.repetend;
-			
+			var output:String = "entier: (" + q.entier.length  + ")\n" + q.entier 
+			output += "\n\ndecimaal: ("+ q.decimaal.length + ")\n" + q.decimaal 
+			output += "\n\nrepetend: (" + q.repetend.length + ")\n" + q.repetend;
+			tbOutput.box.text = output;
+			tbDeling.box.text = String(a.teller / a.noemer);
 		}
 		
 	}
