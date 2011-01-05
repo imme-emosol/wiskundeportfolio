@@ -123,6 +123,23 @@
 			var antwoord:QGetal = new QGetal(entier, decimaal, repetend);
 			return antwoord;
 		}
+		
+		public static function getalNaarBreuk(a:Number):Breuk
+		{
+			var antwoord:Breuk;
+			
+			var temp:Number = a;
+			var exp:Number = 1;
+			
+			while (!isGeheelGetal(temp))
+			{
+				temp = temp * 10;
+				exp = exp * 10;
+			}
+			antwoord = new Breuk(temp, exp);
+			return antwoord;
+			
+		}
 
 	}
 	
