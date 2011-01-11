@@ -15,7 +15,7 @@
 		
 		public function QGetalNaarSBreuk() 
 		{
-			trace(QGetalOperaties.construeerRepetend("haha", 13));
+			trace(QGetalOperaties.construeerRepetend("1234", 20));
 			
 		}
 		
