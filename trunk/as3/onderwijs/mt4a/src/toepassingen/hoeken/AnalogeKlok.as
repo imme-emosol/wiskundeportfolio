@@ -2,34 +2,53 @@ package toepassingen.hoeken
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import wiskunde.assets.Basis;
 	import wiskunde.assets.Pijl;
 	/**
 	 * ...
 	 * @author Jelle Sjollema
 	 */
-	public class AnalogeKlok extends Sprite
+	public class AnalogeKlok extends Basis
 	{
 		public var tijd:Date;
 		public var secondenWijzer:Pijl;
+		public var minutenWijzer:Pijl;
+		public var urenWijzer:Pijl;
 		
-		public function AnalogeKlok() 
+		public function AnalogeKlok()
 		{
+			rooster.alpha = 0.4;
+			
 			secondenWijzer = new Pijl();
 			secondenWijzer.x = 480;
 			secondenWijzer.y = 300;
 			
-			secondenWijzer.tekenPijl(300, 0x000000);
-			addChild(secondenWijzer);
+			minutenWijzer= new Pijl();
+			minutenWijzer.x = 480;
+			minutenWijzer.y = 300;
 			
-			secondenWijzer.rotation = 0;
-			//addEventListener(Event.ENTER_FRAME, update);
+			urenWijzer= new Pijl();
+			urenWijzer.x = 480;
+			urenWijzer.y = 300;
+			
+			
+			secondenWijzer.tekenPijl(300, 0x000000);
+			minutenWijzer.tekenPijl(250, 0x0000ff);
+			urenWijzer.tekenPijl(100, 0xff0000);
+
+			addChild(secondenWijzer);
+			addChild(minutenWijzer);
+			addChild(urenWijzer);
+			
+			addEventListener(Event.ENTER_FRAME, update);
 		}
 		
 		private function update(e:Event):void
 		{
 			tijd = new Date();
-			trace(tijd.seconds);
 			secondenWijzer.rotation = 360*tijd.getSeconds()/60;
+			minutenWijzer.rotation = 360*tijd.getMinutes()/60;
+			urenWijzer.rotation = 360*(tijd.getHours()/12 + tijd.getMinutes()/720);
 		}
 		
 	}
