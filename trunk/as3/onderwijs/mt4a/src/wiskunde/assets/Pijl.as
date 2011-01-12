@@ -14,7 +14,7 @@ package wiskunde.assets
 		
 		public function Pijl() 
 		{
-			//
+			this.scaleY = -1;
 		}
 		
 		public function tekenPijl(lengte:Number, kleur:uint):void
@@ -30,18 +30,18 @@ package wiskunde.assets
 			 
 			 graphics.lineStyle(4, kleur);
 			 graphics.moveTo(0, 0);
-			 graphics.lineTo(lengte, 0);
+			 graphics.lineTo( 0,lengte);
 		}
 		private function tekenPunt():void
 		{
-			var b:Number = 20;
-			var h:Number = 30;
+			var b:Number = 30;
+			var h:Number = 20;
 			graphics.lineStyle(2, kleur);
 			graphics.beginFill(kleur);
-			graphics.moveTo(lengte, 0);
-			graphics.lineTo( lengte-b, h / 2);
-			graphics.lineTo( lengte-b, -h / 2);
-			graphics.lineTo(lengte, 0);
+			graphics.moveTo(0,lengte);
+			graphics.lineTo(h / 2,lengte-b);
+			graphics.lineTo(-h / 2,lengte-b);
+			graphics.lineTo(0,lengte);
 			graphics.endFill();
 		}
 		
