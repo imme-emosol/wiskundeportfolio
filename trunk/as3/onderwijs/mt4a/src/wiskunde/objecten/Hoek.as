@@ -6,22 +6,12 @@ package wiskunde.objecten
 	 */
 	public class Hoek 
 	{
-		private var g:String;
+		public var omwenteling:Number;
 		public var graden:Number;
-		public var rad:Number;
 		
-		public function Hoek(hoek:Number, g:String = "g") 
+		public function Hoek(graden:Number) 
 		{
-			if (g == "g")
-			{
-				this.graden = hoek;
-				this.rad = hoek * Math.PI / 180; 
-			}
-			else
-			{
-				this.rad = hoek;
-				this.graden = hoek * 180 / Math.PI;
-			}
+			this.graden = graden;
 			
 		}
 		
