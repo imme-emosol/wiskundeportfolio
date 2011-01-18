@@ -19,6 +19,25 @@
 			return antwoord;
 		}
 		
+		             
+		public static function ggd(a:Number, b:Number):Number
+		{
+				var antwoord:Number;
+				
+				var rest:Number;
+				while (b != 0)
+				{
+						rest = a % b;
+						a = b;
+						b = rest;
+				}
+				
+				antwoord = a;
+				
+				return antwoord;
+		}
+
+				
 		/**
 		 * De wortel uit een getal trekken... 
 		 */
