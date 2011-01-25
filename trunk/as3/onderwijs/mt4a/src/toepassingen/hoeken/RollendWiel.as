@@ -1,4 +1,4 @@
-﻿package  
+package toepassingen.hoeken  
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -10,20 +10,20 @@
 	 * ...
 	 * @author Jelle Sjollema
 	 */
-	public class Troep extends Sprite
+	public class RollendWiel extends Sprite
 	{
 		public var a:Wiel;
 		public var hoek:Hoek;
 		public var v:Number;
 		
-		public function Troep() 
+		public function RollendWiel() 
 		{
 			this.graphics.lineStyle(2);
 			this.graphics.beginFill(0xeeeeee);
 			this.graphics.drawRect(0, 0, 960, 600);
 			this.graphics.endFill();
 			
-			a = new Wiel(100);
+			a = new Wiel(200);
 			a.x = 300;
 			a.y = 600-a.r;
 			addChild(a);
