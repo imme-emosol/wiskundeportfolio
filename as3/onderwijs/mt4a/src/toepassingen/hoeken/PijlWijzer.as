@@ -33,18 +33,25 @@ package toepassingen.hoeken
 			rooster.addChild(Q);
 			
 			Q.sleepPunt();
+			Q.addEventListener(Punt.PUNT_SLEEP, updateStart);
 			update(null);
 		}
 		
-		private function startSleep(e:Event):void
+		private function updateStart(e:Event):void
 		{
 			addEventListener(Event.ENTER_FRAME, update);
-			//Q.addEventListener(Punt.PUNT_STOP, stopSleep);
+			Q.addEventListener(Punt.PUNT_STOP, updateStop);
 		}
 		
 		private function update(e:Event):void
 		{
-			pijl.rotation = hoek.graden;
+			hoek.radialen = Math.atan2(Q.y, Q.x);
+			pijl.rotation = hoek.graden + 90;
+		}
+		
+		private function updateStop(e:Event):void
+		{
+			removeEventListener(Event.ENTER_FRAME, update);
 		}
 		
 	}
