@@ -21,7 +21,7 @@ package toepassingen.hoeken
 		{
 			hoek = new Hoek(20, true);
 			pijl = new Pijl();
-			pijl.tekenPijl(200, 0x191977);
+			pijl.tekenPijl(100, 0x191977);
 			rooster.addChild(pijl);
 			
 			P = new Punt(0, 0);
