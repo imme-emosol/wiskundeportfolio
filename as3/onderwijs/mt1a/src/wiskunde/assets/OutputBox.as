@@ -37,13 +37,26 @@ package wiskunde.assets
 			box.height 80;
 			label.width = 140;
 			label.height = 50;
+			label.background = true;
+			label.backgroundColor = 0xcccccc;
+			label.selectable = false;
+
 			
 			label.text = labelText;
-			//box.text = boxText;
+			
+			format.size = 18;
+			format.color = 0x0000ff;
+			box.defaultTextFormat = format;
+			box.text = "-";
 			
 			addChild(label);
 			addChild(box);
 			
+		}
+		
+		public function set setNumber(a:Number):void
+		{
+			box.text = String(a);
 		}
 		
 	}
