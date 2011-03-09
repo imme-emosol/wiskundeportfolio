@@ -14,10 +14,12 @@ package toepassing.tekst
 		public function TestBox() 
 		{
 			box = new OutputBox("dit is box1");
+			box.setNumber = 200;
 			addChild(box);
 			
 			box1 = new OutputBox("ik ben een andere box");
 			box1.x = 200;
+			box1.setNumber = 12345566;
 			addChild( box1);
 		}
 		
