@@ -1,6 +1,7 @@
 package toepassing.tekst 
 {
 	import flash.display.Sprite;
+	import flash.events.Event;
 	import wiskunde.assets.InputBox;
 	import wiskunde.assets.OutputBox;
 	/**
@@ -28,7 +29,14 @@ package toepassing.tekst
 			box2.y = 200;
 			addChild(box2);
 			
+			box2.box.addEventListener(Event.CHANGE, veranderd);
 		
+		}
+		
+		private function veranderd(e:Event):void
+		{
+			box.box.text = box2.box.text;
+			box1.box.text = box2.box.text;
 		}
 		
 	}
