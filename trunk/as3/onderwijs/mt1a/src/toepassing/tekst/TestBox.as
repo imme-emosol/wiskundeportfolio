@@ -1,6 +1,7 @@
 package toepassing.tekst 
 {
 	import flash.display.Sprite;
+	import wiskunde.assets.InputBox;
 	import wiskunde.assets.OutputBox;
 	/**
 	 * ...
@@ -10,6 +11,7 @@ package toepassing.tekst
 	{
 		public var box:OutputBox;
 		public var box1:OutputBox;
+		public var box2:InputBox;
 		
 		public function TestBox() 
 		{
@@ -21,6 +23,12 @@ package toepassing.tekst
 			box1.x = 200;
 			box1.setNumber = 12345566;
 			addChild( box1);
+			
+			box2 = new InputBox("inputbox");
+			box2.y = 200;
+			addChild(box2);
+			
+		
 		}
 		
 	}
