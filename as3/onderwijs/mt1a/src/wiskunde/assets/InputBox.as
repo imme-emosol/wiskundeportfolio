@@ -17,7 +17,7 @@ package wiskunde.assets
 		public var waarde:Number;
 		private var format:TextFormat;
 		
-		public function inputBox(labelText:String) 
+		public function InputBox(labelText:String) 
 		{
 			format = new TextFormat();
 			format.size = 26;
@@ -36,7 +36,7 @@ package wiskunde.assets
 			box.y = 50;
 			box.width = 140;
 			box.height 80;
-			box.type = TextFieldType.INPUT
+			box.type = TextFieldType.INPUT;
 			
 			label.width = 140;
 			label.height = 50;
