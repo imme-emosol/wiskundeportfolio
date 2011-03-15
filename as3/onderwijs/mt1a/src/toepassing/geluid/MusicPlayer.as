@@ -15,6 +15,7 @@ package toepassing.geluid
 		public var req:URLRequest;
 		public var kanaal:SoundChannel;
 		public var stopKnop:Sprite;
+		public var bezig:Boolean = true;
 		
 		public function MusicPlayer() 
 		{
@@ -30,7 +31,17 @@ package toepassing.geluid
 		
 		private function stopGeluid(e:MouseEvent):void
 		{
-			kanaal.stop();
+			if (bezig)
+			{
+				kanaal.stop();
+				bezig = false;
+			}
+			else
+			{
+				kanaal = geluid.play();
+				bezig = true;
+			}
+			
 		}
 		
 		private function maakStopKnop():void
