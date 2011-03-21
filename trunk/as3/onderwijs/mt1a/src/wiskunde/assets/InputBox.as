@@ -33,13 +33,13 @@ package wiskunde.assets
 			box = new TextField();
 			label.border = true;
 			box.border = true;
-			box.y = 50;
+			box.y = 30;
 			box.width = 140;
-			box.height 80;
+			box.height = 30;
 			box.type = TextFieldType.INPUT;
 			
 			label.width = 140;
-			label.height = 50;
+			label.height = 30;
 			label.background = true;
 			label.backgroundColor = 0xcccccc;
 			label.selectable = false;			
