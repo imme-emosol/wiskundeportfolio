@@ -19,7 +19,7 @@ package wiskunde.assets
 		public function OutputBox(labelText:String) 
 		{
 			format = new TextFormat();
-			format.size = 26;
+			format.size = 22;
 			format.align = "center";
 			
 			
@@ -27,18 +27,21 @@ package wiskunde.assets
 			this.labelText = labelText;
 			label = new TextField();
 			
+			format.color = 0xeeeeee;
 			label.defaultTextFormat = format;
 			
 			box = new TextField();
 			label.border = true;
 			box.border = true;
-			box.y = 50;
+			box.y = 30;
 			box.width = 140;
-			box.height 80;
+			box.height = 30;
+			box.background = true;
+			box.backgroundColor = 0xeeeeee;
 			label.width = 140;
-			label.height = 50;
+			label.height = 30;
 			label.background = true;
-			label.backgroundColor = 0xcccccc;
+			label.backgroundColor = 0X171799;
 			label.selectable = false;
 
 			
